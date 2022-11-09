@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "382591639569",
+    "project_id": "book-app-accda",
+    "storage_bucket": "book-app-accda.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:382591639569:android:66ea0e166abee6711cd1b0",
+        "android_client_info": {
+          "package_name": "com.example.myapplication2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "382591639569-3kmd9hdhblsn1bvaa22ihts7d3aoduq7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAk967FTWsQXHba-qlZ3kbhYh2cofA1kzk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "382591639569-3kmd9hdhblsn1bvaa22ihts7d3aoduq7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
