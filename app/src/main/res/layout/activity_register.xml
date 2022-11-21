@@ -33,7 +33,9 @@
             android:layout_below="@id/iconIv"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="18dp"
-            android:text="Create New Account"/>
+            android:text="Create New Account"
+            android:textColor="@color/white"
+            android:textSize="28sp"/>
 
     </RelativeLayout>
 
@@ -83,6 +85,7 @@
                     android:drawableStart="@drawable/ic_email_gray"
                     android:drawablePadding="10dp"
                     android:hint="Email"
+                    android:padding="18dp"
                     android:textColorHint="@color/gray01"
                     android:textColor="@color/black"/>
 
@@ -104,6 +107,7 @@
                     android:drawableStart="@drawable/ic_pass"
                     android:inputType="textPassword"
                     android:drawablePadding="10dp"
+                    android:padding="18dp"
                     android:hint="Password"
                     android:textColor="@color/black"
                     android:textColorHint="@color/gray01"/>
@@ -126,6 +130,7 @@
                     android:inputType="textPassword"
                     android:drawablePadding="10dp"
                     android:hint="Confirm Password"
+                    android:padding="18dp"
                     android:textColor="@color/black"
                     android:textColorHint="@color/gray01"/>
             </com.google.android.material.textfield.TextInputLayout>
@@ -144,13 +149,6 @@
         </RelativeLayout>
     </ScrollView>
 
-    <TextView
 
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_alignParentBottom="true"
-        android:padding="10dp"
-        android:text="@string/new_user_signup"/>
 
 </RelativeLayout>

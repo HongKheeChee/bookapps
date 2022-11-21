@@ -53,7 +53,11 @@
                     android:background="@drawable/shape_edittext01"
                     android:drawableStart="@drawable/ic_email_gray"
                     android:drawablePadding="10dp"
-                    android:hint="email" />
+                    android:hint="Email"
+                    android:inputType="textEmailAddress"
+                    android:padding="18dp"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/gray01"/>
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -61,6 +65,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/emailTil"
+                android:layout_marginTop="5dp"
                 app:hintEnabled="false"
                 app:passwordToggleEnabled="true">
 
@@ -71,7 +76,11 @@
                     android:background="@drawable/shape_edittext01"
                     android:drawableStart="@drawable/ic_pass"
                     android:drawablePadding="10dp"
-                    android:hint="email" />
+                    android:hint="Password"
+                    android:inputType="textPassword"
+                    android:padding="10dp"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/gray01"/>
             </com.google.android.material.textfield.TextInputLayout>
 
             <TextView
@@ -86,6 +95,7 @@
                 android:textColor="@color/black" />
 
             <Button
+                android:id="@+id/loginBtn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/forgotTv"
@@ -103,6 +113,7 @@
         android:layout_centerHorizontal="true"
         android:layout_alignParentBottom="true"
         android:padding="10dp"
-        android:text="@string/new_user_signup"/>
+        android:text="@string/new_user_signup"
+        android:textColor="@color/black"/>
 
 </RelativeLayout>
