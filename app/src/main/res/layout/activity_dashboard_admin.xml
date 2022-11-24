@@ -4,7 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DashboardAdminActivity">
+    tools:context=".DashboardAdminActivity"
+    android:background="@drawable/pagebkg"
+    >
 
     <RelativeLayout
         android:id="@+id/toolbarRl"
@@ -44,13 +46,29 @@
             android:background="@android:color/transparent"/>
     </RelativeLayout>
 
+    <EditText
+        android:id="@+id/searchEt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbarRl"
+        android:hint="Search"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="10dp"
+        android:drawableStart="@drawable/ic_search_gray"
+        android:padding="10dp"
+        android:background="@color/white"
+        android:textColorHint="@color/gray01"/>
+
+
+
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/categoryRv"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:listitem="@layout/row_category"
-        android:layout_below="@id/toolbarRl"
+        android:layout_below="@id/searchEt"
         android:layout_margin="5dp"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         android:layout_above="@id/bottomLl"/>

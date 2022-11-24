@@ -5,9 +5,12 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
 
 import com.example.myapplication2.databinding.ActivityDashboardAdminBinding;
+import com.google.android.material.internal.TextWatcherAdapter;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -35,6 +38,24 @@ public class DashboardAdminActivity extends AppCompatActivity {
         firebaseAuth = FirebaseAuth .getInstance();
         checkUser();
         loadCategories();
+
+        binding.searchEt.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+
+    });
 
         binding.logoutBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -67,7 +88,7 @@ public class DashboardAdminActivity extends AppCompatActivity {
         categoryArrayList = new ArrayList<>();
 
         DatabaseReference ref = FirebaseDatabase.getInstance().getReference("Categories");
-        ref.addListenerForSingleValueEvent(new ValueEventListener() {
+        ref.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
 
@@ -80,6 +101,7 @@ public class DashboardAdminActivity extends AppCompatActivity {
                 }
                 adapterCategory = new AdapterCategory(DashboardAdminActivity.this, categoryArrayList);
                 binding.categoryRv.setAdapter(adapterCategory);
+
             }
 
             @Override

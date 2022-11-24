@@ -4,84 +4,80 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".PdfAddActivity">
+    tools:context=".PdfEditActivity">
 
     <RelativeLayout
-        android:id="@+id/toolbarRl"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="250dp"
         android:background="@drawable/shape_toolbar01">
 
         <ImageButton
-            android:id="@+id/backBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:background="@android:color/transparent"
+            android:src="@drawable/ic_back_white"
+            android:background="@color/transparent"
             android:padding="5dp"
-            android:src="@drawable/ic_back_white"/>
+            android:layout_margin="10dp"/>
 
         <ImageView
             android:id="@+id/iconIv"
             android:layout_width="110dp"
             android:layout_height="110dp"
             android:layout_centerHorizontal="true"
-            android:layout_below="@id/backBtn"
+            android:layout_marginTop="40dp"
             android:src="@drawable/booklogo"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/iconIv"
-            android:text="Add a new book"
+            android:layout_below="@+id/iconIv"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="Edit Book Info"
             android:textColor="@color/white"
-            android:textSize="28sp"
-            android:layout_centerHorizontal="true"/>
-
-        <ImageButton
-            android:id="@+id/attachBtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_margin="10dp"
-            android:background="@android:color/transparent"
-            android:padding="5dp"
-            android:src="@drawable/ic_attach_white"/>
+            android:textSize="28sp"/>
 
 
     </RelativeLayout>
-
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/titleTil"
+        android:id="@id/titleTil"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
-        android:layout_marginTop="225dp"
         android:layout_marginEnd="30dp"
+        android:layout_marginTop="225dp"
         app:hintEnabled="false">
 
-    <EditText
-        android:id="@+id/titleEt"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/shape_edittext01"
-        android:drawableStart="@drawable/ic_pdf_gray"
-        android:padding="10dp"
-        android:hint="Book Title"
-        android:inputType="textPersonName|textCapWords"
-        android:textColor="@color/black"
-        android:textColorHint="@color/gray01"/>
+
+
+        <EditText
+            android:id="@+id/titleEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_edittext01"
+            android:drawableStart="@drawable/ic_pdf_gray"
+            android:drawablePadding="10dp"
+            android:hint="Book title"
+            android:inputType="textPersonName|textCapSentences"
+            android:padding="10dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/gray01"
+            android:textSize="16sp"/>
+
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/descriptionTil"
+        android:id="@id/descriptionTil"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
-        android:layout_marginTop="5dp"
         android:layout_marginEnd="30dp"
+        android:layout_marginTop="10dp"
         android:layout_below="@id/titleTil"
+
         app:hintEnabled="false">
+
+
 
         <EditText
             android:id="@+id/descriptionEt"
@@ -89,43 +85,31 @@
             android:layout_height="wrap_content"
             android:background="@drawable/shape_edittext01"
             android:drawableStart="@drawable/ic_pdf_gray"
+            android:drawablePadding="10dp"
+            android:hint="Book desc"
+            android:inputType="textPersonName|textCapSentences"
+            android:gravity="top"
             android:padding="10dp"
-            android:hint="Book Description"
-            android:inputType="textMultiLine|textCapSentences"
             android:textColor="@color/black"
-            android:textColorHint="@color/gray01"/>
+            android:textColorHint="@color/gray01"
+            android:textSize="16sp"/>
+
     </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
-        android:id="@+id/categoryTv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/descriptionTil"
         android:layout_marginStart="30dp"
         android:layout_marginEnd="30dp"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="10dp"
         android:background="@drawable/shape_edittext01"
         android:drawableStart="@drawable/ic_category_gray"
         android:drawableEnd="@drawable/ic_down_gray"
-        android:drawablePadding="10dp"
-        android:gravity="center_vertical"
-        android:hint=""
         android:padding="10dp"
-        android:textColorHint="@color/gray01"
         android:textColor="@color/black"
+        android:textColorHint="@color/gray01"
         android:textSize="16sp"/>
-
-    <Button
-        android:id="@+id/submitBtn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/categoryTv"
-        android:layout_marginStart="30dp"
-        android:layout_marginEnd="30dp"
-        android:layout_marginTop="10dp"
-        android:text="upload"
-        android:textColor="@color/white"/>
 
 
 </RelativeLayout>
-

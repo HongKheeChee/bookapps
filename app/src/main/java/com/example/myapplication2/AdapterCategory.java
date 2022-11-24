@@ -3,6 +3,7 @@ package com.example.myapplication2;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -24,7 +25,7 @@ import java.util.ArrayList;
 public class AdapterCategory extends RecyclerView.Adapter<AdapterCategory.HolderCategory> {
 
 
-    private Context context;
+    private final Context context;
     private ArrayList<ModelCategory> categoryArrayList;
 
     private RowCategoryBinding binding;
@@ -43,7 +44,7 @@ public class AdapterCategory extends RecyclerView.Adapter<AdapterCategory.Holder
     }
 
     @Override
-    public void onBindViewHolder(@NonNull HolderCategory holder, int position) {
+    public void onBindViewHolder(@NonNull AdapterCategory.HolderCategory holder, int position) {
 
         ModelCategory model = categoryArrayList.get(position);
         String id= model.getId();
@@ -58,7 +59,7 @@ public class AdapterCategory extends RecyclerView.Adapter<AdapterCategory.Holder
             public void onClick(View v) {
                 AlertDialog.Builder builder = new AlertDialog.Builder(context);
                 builder.setTitle("Delete")
-                        .setMessage("Are u sure")
+                        .setMessage("Are you sure to delete?")
                         .setPositiveButton("Confirm", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
@@ -77,6 +78,16 @@ public class AdapterCategory extends RecyclerView.Adapter<AdapterCategory.Holder
 
             }
         });
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(context,PdfListAdminActivity.class);
+                intent.putExtra("categoryId", id);
+                intent.putExtra("categoryTitle", category);
+                context.startActivity(intent);
+
+            }
+        });
 
     }
 
@@ -89,7 +100,7 @@ public class AdapterCategory extends RecyclerView.Adapter<AdapterCategory.Holder
                 .addOnSuccessListener(new OnSuccessListener<Void>() {
                     @Override
                     public void onSuccess(Void unused) {
-                        Toast.makeText(context, "Delete sucessfuly", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(context, "Category Deleted successfully", Toast.LENGTH_SHORT).show();
 
                     }
                 })
@@ -104,6 +115,7 @@ public class AdapterCategory extends RecyclerView.Adapter<AdapterCategory.Holder
 
     @Override
     public int getItemCount() {
+
         return categoryArrayList.size();
     }
 
@@ -116,7 +128,7 @@ public class AdapterCategory extends RecyclerView.Adapter<AdapterCategory.Holder
             super(itemView);
 
             categoryTv = binding.categoryTv;
-            deleteBtn = binding .deleteBtn;
+            deleteBtn = binding.deleteBtn;
         }
     }
 }
