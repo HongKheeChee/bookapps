@@ -10,7 +10,6 @@ import android.text.TextWatcher;
 import android.view.View;
 
 import com.example.myapplication2.databinding.ActivityDashboardAdminBinding;
-import com.google.android.material.internal.TextWatcherAdapter;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -116,7 +115,7 @@ public class DashboardAdminActivity extends AppCompatActivity {
         FirebaseUser firebaseUser = firebaseAuth.getCurrentUser();
         if(firebaseUser==null){
 
-            startActivity(new Intent(this,MainActivity.class));
+            startActivity(new Intent(this, MainActivity1.class));
             finish();
         }
         else {
