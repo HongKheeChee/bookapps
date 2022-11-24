@@ -20,7 +20,8 @@
         android:layout_below="@id/iconIv"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
-        android:text=""
+        android:text="Admin Login"
+        android:id="@+id/t1"
 
         android:textSize="16sp" />
 
@@ -28,17 +29,14 @@
         android:id="@+id/loginBtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/skipBtn"
         android:text="login"
-        />
+        android:background="@drawable/shape_button01"
+        android:textColor="@color/white"
+        android:layout_below="@id/t1"/>
 
-    <Button
-        android:id="@+id/skipBtn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:text="Skip"
 
-        />
+
+
+
 
 </RelativeLayout>
