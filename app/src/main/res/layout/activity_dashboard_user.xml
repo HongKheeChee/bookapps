@@ -4,8 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DashboardAdminActivity">
+    android:background="@drawable/back01"
+    tools:context=".DashboardUserActivity">
 
+    <!--Toolbar-->
     <RelativeLayout
         android:id="@+id/toolbarRl"
         android:layout_width="match_parent"
@@ -15,34 +17,52 @@
         <TextView
             android:id="@+id/titleTv"
             android:layout_width="wrap_content"
-            android:layout_centerHorizontal="true"
             android:layout_marginTop="8dp"
             android:layout_height="wrap_content"
-            android:text="User dashboard"
+            android:layout_centerHorizontal="true"
+            android:text="Dashboard User"
             android:textStyle="bold"
             android:textColor="@color/white"/>
 
         <TextView
             android:id="@+id/subTitleTv"
             android:layout_width="wrap_content"
-            android:layout_marginTop="8dp"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:layout_below="@id/titleTv"
-            android:text="abc@example.com"
-            android:textStyle="bold"
+            android:layout_below="@+id/titleTv"
+            android:text="Dashboard User"
             android:textColor="@color/white"/>
 
         <ImageButton
+            android:id="@+id/logoutBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:src="@drawable/ic_logout_white"
             android:layout_alignParentEnd="true"
-            android:layout_marginEnd="10dp"
             android:background="@android:color/transparent"/>
 
-
     </RelativeLayout>
+
+    <!--Tabs-->
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbarRl"
+        android:layout_marginRight="5dp"
+        android:background="@android:color/transparent"
+        app:tabBackground="@drawable/tab_selector"
+        app:tabIndicatorFullWidth="false"
+        app:tabIndicatorHeight="0dp"
+        app:tabMode="scrollable"
+        app:tabUnboundedRipple="false"/>
+
+    <!--ViewPager:Swipe/show/change fragments-->
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tabLayout"/>
 
 </RelativeLayout>

@@ -18,8 +18,10 @@
         <entry key="..\:/Users/User/Downloads/Software-main/Software-main/MyApplication2/app/src/main/res/layout/activity_pdf_list_admin.xml" value="0.25" />
         <entry key="..\:/Users/User/Downloads/Software-main/Software-main/MyApplication2/app/src/main/res/layout/activity_register.xml" value="0.33" />
         <entry key="..\:/Users/User/Downloads/Software-main/Software-main/MyApplication2/app/src/main/res/layout/activity_splash.xml" value="0.1" />
+        <entry key="..\:/Users/User/Downloads/Software-main/Software-main/MyApplication2/app/src/main/res/layout/fragment_books_user.xml" value="0.25" />
         <entry key="..\:/Users/User/Downloads/Software-main/Software-main/MyApplication2/app/src/main/res/layout/row_category.xml" value="0.25" />
         <entry key="..\:/Users/User/Downloads/Software-main/Software-main/MyApplication2/app/src/main/res/layout/row_pdf_admin.xml" value="0.1" />
+        <entry key="..\:/Users/User/Downloads/Software-main/Software-main/MyApplication2/app/src/main/res/layout/row_pdf_user.xml" value="0.11145833333333334" />
       </map>
     </option>
   </component>

@@ -23,7 +23,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-public class LoginActivity1 extends AppCompatActivity {
+public class LoginActivity extends AppCompatActivity {
 
     private ActivityLoginBinding binding;
 
@@ -47,7 +47,7 @@ public class LoginActivity1 extends AppCompatActivity {
         binding.noAccTv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(LoginActivity1.this, RegisterActivity.class));
+                startActivity(new Intent(LoginActivity.this, RegisterActivity.class));
             }
         });
 
@@ -62,7 +62,7 @@ public class LoginActivity1 extends AppCompatActivity {
         binding.forgotTv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(LoginActivity1.this,ForgotPasswordActivity.class));
+                startActivity(new Intent(LoginActivity.this,ForgotPasswordActivity.class));
             }
         });
     }
@@ -102,7 +102,7 @@ public class LoginActivity1 extends AppCompatActivity {
                         @Override
                         public void onFailure(@NonNull Exception e) {
                             progressDialog.dismiss();
-                            Toast.makeText(LoginActivity1.this, ""+e.getMessage(), Toast.LENGTH_SHORT).show();
+                            Toast.makeText(LoginActivity.this, ""+e.getMessage(), Toast.LENGTH_SHORT).show();
                         }
                     });
 
@@ -120,12 +120,12 @@ public class LoginActivity1 extends AppCompatActivity {
                         String userType = ""+snapshot.child("userType").getValue();
 
                         if (userType.equals("user")){
-                            startActivity((new Intent(LoginActivity1.this,DashboardUserActivity.class)));
+                            startActivity((new Intent(LoginActivity.this,DashboardUserActivity.class)));
                             finish();
                         }
                         else if (userType.equals("admin")){
 
-                            startActivity((new Intent(LoginActivity1.this,DashboardAdminActivity.class)));
+                            startActivity((new Intent(LoginActivity.this,DashboardAdminActivity.class)));
                             finish();
                         }
                     }

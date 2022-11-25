@@ -3,10 +3,13 @@ package com.example.myapplication2;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.view.LayoutInflater;
 import android.os.Bundle;
 import android.view.View;
 
-public class MainActivity1 extends AppCompatActivity {
+import com.example.myapplication2.databinding.ActivityMainBinding;
+
+public class MainActivity extends AppCompatActivity {
 
     private ActivityMainBinding binding;
 
@@ -19,7 +22,7 @@ public class MainActivity1 extends AppCompatActivity {
         binding.loginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity1.this, LoginActivity1.class));
+                startActivity(new Intent(MainActivity.this,LoginActivity.class));
             }
         });
 
