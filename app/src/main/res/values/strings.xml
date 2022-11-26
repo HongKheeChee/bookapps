@@ -1,4 +1,14 @@
 <resources>
     <string name="app_name">My Application2</string>
+    <string name="splash_name">LibraryApp</string>
     <string name="welcome">welcome</string>
+    <string name="new_user_signup">New user? <b>Signup</b></string>
+
+    <string name="expand_all">Read more</string>
+
+    //Books 1
+    <string name="bk_content1">In the aftermath of a colossal battle, the future of the Seven Kingdoms hangs in the balance—beset by newly emerging threats from every direction. In the east, Daenerys Targaryen, the last scion of House Targaryen, rules with her three dragons as queen of a city built on dust and death. But Daenerys has thousands of enemies, and many have set out to find her. As they gather, one young man embarks upon his own quest for the queen, with an entirely different goal in mind.</string>
+    <string name="bk_content2">Druidic prophecies, a galactic space adventure, a cabin of horrific secrets – and a mysterious white cat that seems to walk through the very stories themselves.Whether you’re in the mood for a fantastic adventure, an edge-of-your-seat horror tale or a budding romance, Winds of Winter is the perfect read for this holiday season – a gift for being wonderful readers.</string>
+    <string name="bk_content3">The Four Winds is an award-winning historical fiction novel that illuminates the Dust Bowl era of the Great Depression, where farmers faced deadly droughts that often forced them from their land.</string>
+    <string name="bk_content4">Nora Seed feels stuck in her life, bound to the choices she made that she still is not sure were right. When Nora is ready to leave it all behind, she finds herself in a peculiar library, where each of the infinite books offers a portal to a parallel world, showing her all the many ways her life could have been slightly or drastically different, had she made other decisions.</string>
 </resources>
