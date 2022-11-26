@@ -1,33 +1,34 @@
 {
   "project_info": {
-    "project_number": "838515359217",
-    "project_id": "library-firebase-e078b",
-    "storage_bucket": "library-firebase-e078b.appspot.com"
+    "project_number": "382591639569",
+    "firebase_url": "https://book-app-accda-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "book-app-accda",
+    "storage_bucket": "book-app-accda.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:838515359217:android:f7eb4f741a2c221dfa5850",
+        "mobilesdk_app_id": "1:382591639569:android:66ea0e166abee6711cd1b0",
         "android_client_info": {
-          "package_name": "com.example.libraryapp"
+          "package_name": "com.example.myapplication2"
         }
       },
       "oauth_client": [
         {
-          "client_id": "838515359217-35fdibgtvfs5jkki9h2eamtv7rrmvath.apps.googleusercontent.com",
+          "client_id": "382591639569-3kmd9hdhblsn1bvaa22ihts7d3aoduq7.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDYbdeCDRAmEa1COvyZANnTDbWhBl1Zmqk"
+          "current_key": "AIzaSyAk967FTWsQXHba-qlZ3kbhYh2cofA1kzk"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "838515359217-35fdibgtvfs5jkki9h2eamtv7rrmvath.apps.googleusercontent.com",
+              "client_id": "382591639569-3kmd9hdhblsn1bvaa22ihts7d3aoduq7.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

@@ -3,34 +3,79 @@ package com.example.myapplication2;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.view.LayoutInflater;
 import android.os.Bundle;
 import android.view.View;
 
-import com.example.myapplication2.databinding.ActivityMainBinding;
+import android.widget.Toast;
+
+import androidx.cardview.widget.CardView;
 
 public class MainActivity extends AppCompatActivity {
 
-    private ActivityMainBinding binding;
+    private CardView bookBtn;
+    private CardView newsBtn;
+    private CardView logOutBtn;
+    private CardView sellbook;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        binding = ActivityMainBinding.inflate(getLayoutInflater());
-        setContentView(binding.getRoot());
+        setContentView(R.layout.activity_main);
 
-        binding.loginBtn.setOnClickListener(new View.OnClickListener() {
+
+        bookBtn = findViewById(R.id.cardBook);
+        newsBtn = findViewById(R.id.cardNews);
+        logOutBtn = findViewById(R.id.cardLogoutBtn);
+        sellbook = findViewById(R.id.cardSellBook);
+
+        bookBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this,LoginActivity.class));
+                openBook();
             }
         });
 
-        binding.skipBtn.setOnClickListener(new View.OnClickListener() {
+        newsBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                openNews();
+            }
+        });
+
+        logOutBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(MainActivity.this, "Successfully Logout", Toast.LENGTH_SHORT).show();
+                openLogout();
 
             }
         });
+
+        sellbook.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                opensellbook();
+            }
+        });
+    }
+
+    public void openBook() {
+        Intent intent = new Intent(this, DashboardUserActivity.class);
+        startActivity(intent);
+    }
+
+    public void openNews(){
+        Intent intent = new Intent(MainActivity.this, NewsActivity.class);
+        startActivity(intent);
+    }
+
+    public void openLogout() {
+        Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+        startActivity(intent);
+    }
+
+    public void opensellbook() {
+        Intent intent = new Intent(MainActivity.this, Sellbooks.class);
+        startActivity(intent);
     }
 }
