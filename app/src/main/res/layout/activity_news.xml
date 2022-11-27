@@ -41,14 +41,14 @@
         tools:listitem="@layout/categories_rv_item" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/idRVNews"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/idRVCategories"
+        android:id="@+id/idRVNews"
+        tools:listitem="@layout/news_rv_item"
         android:layout_marginTop="5dp"
-        android:orientation="vertical"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        tools:listitem="@layout/news_rv_item" />
+        android:orientation="vertical"/>
 
     <ProgressBar
         android:id="@+id/idPBLoading"
