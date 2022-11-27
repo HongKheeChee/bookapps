@@ -1,7 +1,7 @@
 <resources>
-    <string name="app_name">My Application2</string>
-    <string name="splash_name">LibraryApp</string>
-    <string name="welcome">welcome</string>
+    <string name="app_name">Book Store</string>
+    <string name="splash_name">Book Store</string>
+    <string name="welcome">Welcome</string>
     <string name="new_user_signup">New user? <b>Signup</b></string>
 
     <string name="expand_all">Read more</string>
